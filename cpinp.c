@@ -9,9 +9,9 @@
 
 char *printchar(char *s)
 {
-	int c, sum;
+	int c, lastchar;
 
-	sum = 'a';
+	lastchar = 'a';
 	c = 0;
 
 	while (s[c] != '\0')
@@ -20,10 +20,10 @@ char *printchar(char *s)
 			putchar(s[c]);
 		if (s[c] == ' ')
 		{
-			if (sum != ' ')
+			if (lastchar != ' ')
 				putchar(s[c]);
 		}
-		sum = s[c];
+		lastchar = s[c];
 		c++;
 	}
 
